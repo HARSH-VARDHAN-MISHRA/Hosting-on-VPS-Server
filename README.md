@@ -119,7 +119,7 @@ Commands to create this file:
 
 ### Step 8:
 Request for SSL certificate .
-Command : `sudo certbot --nginx -d api.DOMAIN_NAME.com -d www.api. DOMAIN_NAME.com`
+Command : `sudo certbot --nginx -d api.DOMAIN_NAME.com -d www.api. DOMAIN_NAME.com` .
 Example : `sudo certbot --nginx -d api.labmantra.com -d www.api.labmantra.com`
 
 ### Step 9:
