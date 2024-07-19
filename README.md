@@ -117,12 +117,14 @@ Commands to create this file:
 2. `ln -s ../sites-available/<server_name>.conf`.
 3. `sudo nginx -t` // configure and test 
 
-Step 8 ) Request for SSL certificate 
-Command : sudo certbot --nginx -d api.DOMAIN_NAME.com -d www.api. DOMAIN_NAME.com
-Example : sudo certbot --nginx -d api.labmantra.com -d www.api.labmantra.com
+### Step 8:
+Request for SSL certificate .
+Command : `sudo certbot --nginx -d api.DOMAIN_NAME.com -d www.api. DOMAIN_NAME.com`
+Example : `sudo certbot --nginx -d api.labmantra.com -d www.api.labmantra.com`
 
-Step 9) Restart the nginx 
-Command : sudo systemctl restart nginx
+### Step 9:
+Restart the nginx 
+Command : `sudo systemctl restart nginx`
 
 
 
