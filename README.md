@@ -111,7 +111,6 @@ server {
 ```
 ### Step 7:
 Create a `.conf` file in `sites-enabled` with the same name as the file created in `sites-available`.
-
 Commands:
 
 
