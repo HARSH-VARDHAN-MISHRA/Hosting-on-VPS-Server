@@ -45,3 +45,82 @@ After every new download, please run the following commands:
 ```bash
 sudo apt update
 sudo apt upgrade
+```
+
+
+
+
+
+# Live Backend on VPS
+
+### Firstly, Please remember to add the root in domain DNS for `api` and `www.api`.
+
+### Step 1:
+Command: `git clone <git repo Link>`  
+Example: `git clone https://github.com/HARSH-VARDHAN-MISHRA/Laboratory.git`
+
+### Step 2:
+Go to server file folder and download the node modules.  
+Command: `pnpm install`
+
+### Step 3:
+Add the `.env` file:
+- Command: `nano .env` (nano command is used to create a file)
+- Now add the file content then:
+  - `Ctrl + O`
+  - `Enter`
+  - `Ctrl + X` (To return back)
+- If you want to see the changes, then use the command: `cat <file_name>`
+- Reminder: Please change the PORT number and remember it for adding further in the `.conf` file.
+
+### Step 4:
+Run the command to check if the server is running: `node <server_file_name>`  
+Example: `node server.js`
+
+### Step 5:
+Add the server to the pm2 list.  
+Command: `pm2 start <server_file_name> --name <project_name_shown_in_PM2_list> -- start`  
+Example: `pm2 start server.js --name labmantra -- start`  
+To see all the pm2 server lists: `pm2 ls`
+
+### Step 6:
+Go to `sites-available` and create a file `<server_name>.conf`.  
+Example: `nano labmantra.conf`
+
+Commands to create this file:
+1. `cd /etc/nginx`
+2. `cd ./sites-available`
+3. `nano <server_name>.conf` (Example: `nano labmantra.conf`)
+
+What to add in this file:
+
+```nginx
+server {
+    listen 80;
+    server_name api.DOMAIN_NAME www.api.DOMAIN_NAME;
+
+    location / {
+        proxy_pass http://localhost:PORT_NUMBER_ON_ENV_FILE;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+### Step 7:
+Create a `.conf` file in `sites-enabled` with the same name as the file created in `sites-available.`
+Commands:
+
+
+
+
+
+
+
+
+
+
+
+
