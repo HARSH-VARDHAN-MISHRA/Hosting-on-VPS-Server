@@ -114,7 +114,7 @@ Create a `.conf` file in `sites-enabled` with the same name as the file created 
 
 Commands to create this file:
 1. `cd ../sites-enabled`
-2. `ln -s ../sites-available/<server_name>.conf`. (Example: `ln -s ../sites-available/labmantra.conf`)
+2. `ln -s ../sites-available/<server_name>.conf`.
 3. `sudo nginx -t` // configure and test 
 
 
