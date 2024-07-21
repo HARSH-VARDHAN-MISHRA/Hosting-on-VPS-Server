@@ -145,8 +145,27 @@ sudo systemctl restart nginx
 ### Congratulations 🥳 , Your Backend is live 
 
 
+# Update Backend 
 
+### Step 1 :
+Update the code by git Repository.
+```bash
+git pull
+```
 
+### Step 2 : 
+Update the server by installing it.
+
+### Step 3 : 
+Restart the pm2 server 
+```bash
+pm2 restart <List_Number>
+```
+### Step 4 :
+Restart the System
+```bash
+sudo systemctl restart nginx
+```
 
 
 
