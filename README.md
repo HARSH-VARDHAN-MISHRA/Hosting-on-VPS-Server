@@ -56,7 +56,9 @@ sudo apt upgrade
 ### Firstly, Please remember to add the root in domain DNS for `api` and `www.api`.
 
 ### Step 1:
-Command: `git clone <git repo Link>`  
+Command: ```bash
+git clone <git repo Link>
+```
 Example: `git clone https://github.com/HARSH-VARDHAN-MISHRA/Laboratory.git`
 
 ### Step 2:
