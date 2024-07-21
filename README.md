@@ -56,14 +56,18 @@ sudo apt upgrade
 ### Firstly, Please remember to add the root in domain DNS for `api` and `www.api`.
 
 ### Step 1:
-Command: ```bash
+Command: 
+```bash
 git clone <git repo Link>
 ```
 Example: `git clone https://github.com/HARSH-VARDHAN-MISHRA/Laboratory.git`
 
 ### Step 2:
 Go to server file folder and download the node modules.  
-Command: `pnpm install`
+Command: 
+```bash
+pnpm install
+```
 
 ### Step 3:
 Add the `.env` file:
@@ -81,9 +85,15 @@ Example: `node server.js`
 
 ### Step 5:
 Add the server to the pm2 list.  
-Command: `pm2 start <server_file_name> --name <project_name_shown_in_PM2_list> -- start`  
+Command: 
+```bash
+pm2 start <server_file_name> --name <project_name_shown_in_PM2_list> -- start
+```
 Example: `pm2 start server.js --name labmantra -- start`  
-To see all the pm2 server lists: `pm2 ls`
+To see all the pm2 server lists: 
+```bash
+pm2 ls
+```
 
 ### Step 6:
 Go to `sites-available` and create a file `<server_name>.conf`.  
@@ -121,12 +131,17 @@ Commands to create this file:
 
 ### Step 8:
 Request for SSL certificate .
-Command : `sudo certbot --nginx -d api.DOMAIN_NAME.com -d www.api. DOMAIN_NAME.com` .
+Command : 
+```bash
+sudo certbot --nginx -d api.DOMAIN_NAME.com -d www.api. DOMAIN_NAME.com
+```
 Example : `sudo certbot --nginx -d api.labmantra.com -d www.api.labmantra.com`
 
 ### Step 9:
 Restart the nginx 
-Command : `sudo systemctl restart nginx`
+```bash
+sudo systemctl restart nginx
+```
 
 
 
