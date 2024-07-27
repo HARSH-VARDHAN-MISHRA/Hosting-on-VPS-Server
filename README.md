@@ -283,7 +283,9 @@ git pull
 
 ### Step 2 : 
 Update the client by installing it.
-
+```nginx
+npm install
+```
 ### Step 3 : 
 Delete the OLD build folder.
 ```nginx
