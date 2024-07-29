@@ -87,9 +87,9 @@ Example: `node server.js`
 Add the server to the pm2 list.  
 Command: 
 ```bash
-pm2 start <server_file_name> --name <project_name_shown_in_PM2_list> -- start
+pm2 start <server_file_name> --name <project_name_shown_in_PM2_list>
 ```
-Example: `pm2 start server.js --name labmantra -- start`  
+Example: `pm2 start server.js --name labmantra`  
 To see all the pm2 server lists: 
 ```bash
 pm2 ls
