@@ -169,7 +169,7 @@ sudo systemctl restart nginx
 
 # Live FrontEnd on VPS 
 
-### Firstly, Please remember to add the root in domain DNS for `api` and `www.api`.
+### Firstly, Please remember to add the root in domain DNS for `DOMAIN_NAME` and `www.DOMAIN_NAME`.
 
 ### Step 1:
 Command: 
