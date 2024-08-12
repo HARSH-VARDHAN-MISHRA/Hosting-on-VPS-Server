@@ -226,7 +226,7 @@ server {
     root /root/Test/build;  // Path of the file and if created by vite then ( build - dist )
 
     location / {
-        try_files $uri $uri/ =404;
+        try_files $uri $uri/ /index.html;
     }
 }
 ```
