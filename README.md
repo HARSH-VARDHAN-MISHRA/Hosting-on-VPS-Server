@@ -196,10 +196,6 @@ If .env then add it to the file. Add the `.env` file:
 - Reminder: Please  change the ENV file url 
 
 ### Step 4:
-Run the command to check if the server is running: `node <server_file_name>`  
-Example: `node server.js`
-
-### Step 5:
 Create build file 
 Command: 
 ```bash
@@ -207,7 +203,7 @@ npm run build
 ```
 ###### if want to delete then Command : rm  -r file_name
 
-### Step 6:
+### Step 5:
 Go to `sites-available` and create a file `<server_name>.conf` file.  
 Example: `nano testfile.conf`
 
@@ -248,7 +244,7 @@ server {
 ```bash
 sudo nginx -t // for configure and test the file
 ```
-### Step 7:
+### Step 6:
 Create a `.conf` file in `sites-enabled` with the same name as the file created in `sites-available` .
 
 Commands to create this file:
@@ -256,7 +252,7 @@ Commands to create this file:
 2. `ln -s ../sites-available/<server_name>.conf`.
 3. `sudo nginx -t` // configure and test 
 
-### Step 8:
+### Step 7:
 Request for SSL certificate .
 Command : 
 ```bash
@@ -264,7 +260,7 @@ sudo certbot --nginx -d DOMAIN_NAME.com -d www.DOMAIN_NAME.com
 ```
 Example : `sudo certbot --nginx -d test.com -d www.test.com`
 
-### Step 9:
+### Step 8:
 Restart the nginx 
 ```bash
 sudo systemctl restart nginx
